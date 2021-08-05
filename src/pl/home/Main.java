@@ -1,7 +1,6 @@
 package pl.home;
 
-import pl.home.peselinformation.DataExtraction;
-import pl.home.peselinformation.DetailsFromID;
+import pl.home.peselinformation.IdNumber;
 import pl.home.validation.Compatibility;
 
 public class Main {
@@ -12,9 +11,11 @@ public class Main {
         do {
             String userInput = UserInteraction.askForUserSerialNumber();
             if (peselCompatibility.isIDCompliant(userInput)) {
-                DetailsFromID detailsFromID = new DetailsFromID(userInput);
-                DataExtraction.extractDataFromPesel(detailsFromID);
-                DataExtraction.printOutData(detailsFromID);
+                IdNumber polishPesel = new IdNumber(userInput,
+                        IdNumber.calculateBirthDate(userInput),
+                        IdNumber.defineGender(userInput),
+                        IdNumber.setPrimeStatus(userInput));
+                polishPesel.printOutUserDetails();
             }
         }
         while (UserInteraction.shouldContinue());
