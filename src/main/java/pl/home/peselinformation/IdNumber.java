@@ -1,6 +1,7 @@
 package pl.home.peselinformation;
 
 import java.time.LocalDate;
+import lombok.SETTER
 
 public class IdNumber {
 
