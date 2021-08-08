@@ -1,37 +1,18 @@
 package pl.home.peselinformation;
 
-import java.time.LocalDate;
-import lombok.SETTER
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
+import java.time.LocalDate;
+
+@Data
+@AllArgsConstructor
 public class IdNumber {
 
     private final String pesel;
     private String gender;
     private String birthDate;
     private String primeStatus;
-
-    public IdNumber(String pesel, String gender, String birthDate, String primeStatus) {
-        this.pesel = pesel;
-        this.gender = gender;
-        this.birthDate = birthDate;
-        this.primeStatus = primeStatus;
-    }
-
-    public String getPesel() {
-        return pesel;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public String getBirthDate() {
-        return birthDate;
-    }
-
-    public String getPrimeStatus() {
-        return primeStatus;
-    }
 
     public static String defineGender(String input) {
         return (!isEvenNumber(Character.getNumericValue(input.charAt(9)))) ? "Male" : "Female";
