@@ -54,11 +54,13 @@ public class IdNumber {
         return status;
     }
 
-    public void printOutUserDetails() {
-        System.out.println("Your Pesel no.: " + getPesel());
-        System.out.println("Gender: " + getGender());
-        System.out.println("BoD: " + getBirthDate());
-        System.out.println("Prime status:  " + getPrimeStatus());
+    @Override
+    public String toString() {
+        return "\n-----------------------"
+                + "\nID Number: " + pesel
+                + "\nGender: " + gender
+                + "\nBoD: " + birthDate
+                + "\nPrime Status: " + primeStatus
+                + "\n-----------------------\n";
     }
-
 }

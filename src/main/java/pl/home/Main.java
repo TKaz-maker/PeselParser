@@ -15,7 +15,7 @@ public class Main {
                         IdNumber.calculateBirthDate(userInput),
                         IdNumber.defineGender(userInput),
                         IdNumber.setPrimeStatus(userInput));
-                polishPesel.printOutUserDetails();
+                UserInteraction.printOutUserDetails(polishPesel);
             }
         }
         while (UserInteraction.shouldContinue());
