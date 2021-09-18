@@ -30,23 +30,23 @@ public class Compatibility {
     public boolean isIDCompliant(String input) {
         boolean check = true;
         if (!doesContainOnlyDigits(input)) {
-            Printouts.printOutShouldContainOnlyNumbers();
+            Errors.printOutShouldContainOnlyNumbers();
             return false;
         }
         if (peselLength(input) < 11) {
-            Printouts.printoutNumberToShort();
+            Errors.printoutNumberToShort();
             return false;
         }
         if (peselLength(input) > 11) {
-            Printouts.printoutNumberToLong();
+            Errors.printoutNumberToLong();
             return false;
         }
         if (!isBirthDateCorrect(input)) {
-            Printouts.printOutIncorrectBoD();
+            Errors.printOutIncorrectBoD();
             return false;
         }
         if (!isControlNumberValid(input)) {
-            Printouts.printOutIncorrectCtrlNumber();
+            Errors.printOutIncorrectCtrlNumber();
             return false;
         }
         return check;
