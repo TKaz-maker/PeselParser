@@ -36,7 +36,7 @@ public class IdNumber {
 
     @Override
     public String toString() {
-        return "\n-----------------------"
+        return "\n----------------------"
                 + "\nID Number: " + pesel
                 + "\nGender: " + gender
                 + "\nPrime Status: " + primeStatus;

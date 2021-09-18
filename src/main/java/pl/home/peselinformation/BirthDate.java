@@ -37,6 +37,6 @@ public class BirthDate implements BirthDates {
     @Override
     public String toString() {
         return "BoD: " + LocalDate.of(birthYear,birthMonth,birthDay) +
-                "\n-----------------------\n";
+                "\n----------------------\n";
     }
 }
