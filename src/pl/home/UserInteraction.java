@@ -1,7 +1,5 @@
 package pl.home;
 
-import pl.home.peselinformation.BirthDates;
-import pl.home.peselinformation.IdNumber;
 import java.util.Scanner;
 
 class UserInteraction {
@@ -31,12 +29,5 @@ class UserInteraction {
                     System.out.println("Please type Y or N.");
             }
         }
-    }
-
-    static void printOutUserDetails(IdNumber idNumber) {
-        System.out.println(idNumber);
-    }
-    static void printOutUserBoD(BirthDates birthDates) {
-        System.out.println(birthDates);
     }
 }

@@ -1,8 +1,8 @@
 package pl.home.validation;
 
-class Errors {
+class Printouts {
 
-    private Errors() {
+    private Printouts() {
         throw new IllegalStateException("Utility class");
     }
 
